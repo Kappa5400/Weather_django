@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {% extends "base.html" %}
+    {% block title %}City{% endblock %}
+</head>
+{%block content %}
+    <p> Hello {{ city }}</p>
+    <p> Below is your weather and location.</p>
+
+
+    <p> Current temperature:{{ weather ["Current temperature_2m"] }}</p>
+    <p> Coordinates: {{weather ["Coordinates"] }} </p>
+    <p> Timezone: {{ weather ["Timezone"] }} </p>
+    <p> Timezone difference to GMT+0: {{ weather ["Timezone difference to GMT+0"] }} </p>
+    <p> Current time: {{ weather ["Current time"] }} </p>
+    <p> Current temperature_2m: {{ weather ["Current temperature_2m"] }} </p>
+    <p> Hourly: {{ weather ["Hourly"] }} </p>
+
+    <a href="/">Go back</a>
+{% endblock %}
+</html>
+
